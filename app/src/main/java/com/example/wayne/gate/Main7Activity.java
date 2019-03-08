@@ -18,12 +18,9 @@ public class Main7Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main7);
-    }
-
-    public void genbtn(View v) {
-        Bundle bundle=getIntent().getExtras();
-        String s=bundle.getString("ed1");
-        ImageView im1 = (ImageView)findViewById(R.id.imageView);
+        Bundle bundle = getIntent().getExtras();
+        String s = bundle.getString("ed1");
+        ImageView im1 = (ImageView) findViewById(R.id.imageView);
         Bitmap bitmap = QRCodeHelper
                 .newInstance(this)
                 .setContent(s)
@@ -31,9 +28,6 @@ public class Main7Activity extends AppCompatActivity {
                 .setMargin(2)
                 .getQRCOde();
         im1.setImageBitmap(bitmap);
-
     }
-
-
 
 }
